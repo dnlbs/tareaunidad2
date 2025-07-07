@@ -9,6 +9,22 @@ Sistema Java que modela diferentes tipos de contenido audiovisual (películas, s
 - **Relaciones** (asociación, composición).
 - **Polimorfismo** mediante métodos sobrescritos.
 
+## Estructura del Proyecto
+src/
+├── poo/
+│   ├── Main.java            # Punto de entrada
+│   └── PruebaAudioVisual.java
+└── uni1a/
+    ├── ContenidoAudiovisual.java
+    ├── Pelicula.java
+    ├── SerieDeTV.java
+    ├── Documental.java
+    ├── Cortometraje.java    # Nueva subclase
+    ├── VideoYouTube.java    # Nueva subclase
+    ├── Actor.java
+    ├── Temporada.java
+    └── Investigador.java
+    
 ### Problema que resuelve
 Organiza y gestiona información de producciones audiovisuales con sus componentes clave (actores, temporadas, investigadores), ideal para estudios de cine o plataformas de streaming.
 
