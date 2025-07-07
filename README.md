@@ -1,59 +1,72 @@
-# 📽️ Proyecto P00 - Gestión de Contenidos Audiovisuales  
+# Proyecto P00 - Gestión de Contenidos Audiovisuales  
 **Universidad Politécnica Salesiana**  
 *Programación Orientada a Objetos - Unidad 2*
 *Estudiante Evelyn Daniela Dominguez Dominguez*
 
----
+## Descripción del Proyecto
+Sistema Java que modela diferentes tipos de contenido audiovisual (películas, series, documentales, cortometrajes y videos digitales) utilizando **Programación Orientada a Objetos**. Implementa:
+- **Herencia** y **clases abstractas**.
+- **Relaciones** (asociación, composición).
+- **Polimorfismo** mediante métodos sobrescritos.
 
-## 📌 Descripción  
-Sistema de gestión para contenidos audiovisuales (series, películas, documentales) con relaciones de composición y asociación, implementado en Java.  
-**Extensión personal**: Se añadieron las subclases `VideoYouTube` y `Cortometraje` (Etapa 4).
+### Problema que resuelve
+Organiza y gestiona información de producciones audiovisuales con sus componentes clave (actores, temporadas, investigadores), ideal para estudios de cine o plataformas de streaming.
 
----
+## Características Principales
+- **Clases implementadas**:
+  - Base: `ContenidoAudiovisual` (abstracta).
+  - Contenido: `Pelicula`, `SerieDeTV`, `Documental`, `Cortometraje`, `VideoYouTube`.
+  - Relaciones: `Actor`, `Temporada`, `Investigador`.
+- **Funcionalidades**:
+  - Creación y asociación de objetos.
+  - Visualización estructurada de detalles.
 
-## 🏗️ Estructura de Clases  
+## Instalación y Ejecución
 
-### Clases Base  
-- `ContenidoAudiovisual` (clase abstracta)  
-  - Atributos: `titulo`, `duracion`, `rating`  
-  - Métodos: `calcularRatingPromedio()`  
+### Requisitos
+- Git (opcional)
+- Eclipse/IDE compatible 
 
-### Clases de Contenido Principal  
-- `SerieDeTV` (extiende `ContenidoAudiovisual`)  
-  - Relación: **Composición** con `Temporada`  
-  - Métodos: `agregarTemporada()`, `listarCapítulos()`  
-- `Pelicula` (extiende `ContenidoAudiovisual`)  
-  - Relación: **Asociación** con `Actor`  
-- `Documental` (extiende `ContenidoAudiovisual`)  
-  - Relación: **Asociación** con `Investigador`  
-
-### Subclases Nuevas (Mi Implementación)  
-- `VideoYouTube` (extiende `ContenidoAudiovisual`)  
-  - Atributos únicos: `canal`, `likes`  
-  - Métodos: `darLike()`, `generarEnlace()`  
-- `Cortometraje` (extiende `ContenidoAudiovisual`)  
-  - Atributos únicos: `festival`, `esAnimacion`  
-  - Métodos: `esPremiado()`  
-
-### Clases de Relación  
-- `Actor` → Asociación con `Pelicula`  
-- `Temporada` → Composición con `SerieDeTV`  
-- `Investigador` → Asociación con `Documental`  
-
----
-
-## 🔗 Relaciones Implementadas  
-
-| Relación                | Tipo          | Descripción                                  |
-|-------------------------|---------------|---------------------------------------------|
-| `Actor` ↔ `Pelicula`    | Asociación    | Actores participan en múltiples películas.  |
-| `Temporada` → `SerieDeTV`| Composición   | Temporadas no existen sin la serie.         |
-| `Investigador` ↔ `Documental`| Asociación | Investigadores colaboran en documentales.   |
-
----
-
-## 🚀 Instrucciones de Uso  
-
-1. **Clonar el repositorio**:  
+### Pasos para clonar y ejecutar
+1. **Clonar repositorio**:
    ```bash
-   git clone https://github.com/tu-usuario/proyecto-series-java.git
+   git clone https://github.com/tu-usuario/poo_unidad1.git
+   cd poo_unidad1
+
+## Instrucciones de Uso  
+
+  Guía de Clonación y Ejecución del Proyecto POO
+
+## Pasos para Clonar y Ejecutar (como lo hicimos en Eclipse)
+
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/CS-Programacion-Orientada-Objetos/poo_unidad1.git
+cd poo_unidad1
+### 2. Importar en Eclipse
+Abre Eclipse y selecciona:
+
+File > Import > Git > Projects from Git
+
+Elige "Clone URI" y pega esta URL:
+
+text
+https://github.com/CS-Programacion-Orientada-Objetos/poo_unidad1.git
+Sigue el asistente:
+
+En Branch Selection: Marca main o master
+
+En Local Destination: Elige tu carpeta de workspace
+
+### 3. Configurar el proyecto
+Si Eclipse no reconoce el proyecto como Java:
+
+Haz clic derecho en el proyecto > Configure > Convert to Java Project
+
+Verifica el JDK:
+
+Click derecho en proyecto > Build Path > Configure Build Path
+
+En la pestaña Libraries: Asegúrate de tener JRE System Library [JavaSE-17]
+
+### 4. Ejecutar las pruebas
